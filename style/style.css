@@ -281,6 +281,10 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
   }
 
   /********************* Header *********************/
+  header {
+    border-radius: 1rem 1rem 0 0;
+  }
+
   #header-logo {
     position: relative;
     left: 50%;
@@ -369,11 +373,8 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
     text-decoration: none;
   }
   
-  body {
-    background-color: #99E2D0;
-  }
   
-  .responsive-card {
+  header, nav, .goal-txt {
     background-color: white;
   }
   @media screen and (min-width: 1024px) {
@@ -382,6 +383,7 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
       margin: 1rem auto;
       border-radius: 1rem;
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 40px 40px rgba(0, 0, 0, 0.25);
+      background-color: #9ae2eb;
     }
   }
   @media screen and (min-width: 1440px) {
