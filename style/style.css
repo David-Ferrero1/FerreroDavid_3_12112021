@@ -263,7 +263,7 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
   
   .fa-heart:hover::after {
     opacity: 1;
-    animation: heart-transform 0.75s ease-in-out;
+    animation: heart-transform 0.45s ease-in-out;
   }
   @keyframes heart-transform {
     0% {
