@@ -16,7 +16,6 @@
     transform: scale(1);
   }
 }
-/********************* Header *********************/
 @keyframes SlideUp {
   0% {
     transform: translateY(-10%);
@@ -33,15 +32,15 @@
 @keyframes ring {
   0% {
     transform: rotate(0deg);
-    box-shadow: 1px 5px 2px #e65c00;
+    box-shadow: 1px 5px 2px #9356DC;
   }
   50% {
     transform: rotate(180deg);
-    box-shadow: 1px 5px 2px #18b201;
+    box-shadow: 1px 5px 2px #FF79DA;
   }
   100% {
     transform: rotate(360deg);
-    box-shadow: 1px 5px 2px #0456c8;
+    box-shadow: 1px 5px 2px #0da57f;
   }
 }
 @keyframes text {
@@ -56,6 +55,17 @@
   to {
     opacity: 0;
     z-index: -1;
+  }
+}
+@keyframes card-new {
+  0% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 html {
@@ -323,12 +333,16 @@ th {
   position: absolute;
   background: #99e2d0;
   color: #008766;
+  border-radius: 2px;
   top: 1rem;
   right: 1rem;
   padding: 0.4rem 0.6rem;
   font-family: "Roboto";
   font-size: 0.8rem;
   font-weight: 700;
+}
+.restaurant-card .restaurant-card-new:hover {
+  animation: card-new 0.45s ease-in-out;
 }
 .restaurant-card:hover {
   transform: scale(1.02);
@@ -396,8 +410,6 @@ th {
 }
 
 .heart-container {
-  height: 50px;
-  height: 4em;
   width: 4em;
   display: flex;
   flex-direction: row;
@@ -410,7 +422,7 @@ th {
   font-size: 1.5em;
   position: relative;
   cursor: pointer;
-  color: black;
+  color: #000;
   transition: color 0.5s ease;
 }
 .fa-heart::after {
@@ -424,7 +436,7 @@ th {
   position: absolute;
   top: 0;
   left: calc(50% - 0.5em);
-  color: #FF79DA;
+  color: #9356DC;
   opacity: 0;
 }
 .fa-heart:hover {
@@ -435,6 +447,9 @@ th {
 .fa-heart:hover::after {
   opacity: 1;
   animation: heart-transform 0.45s ease-in-out;
+}
+.fa-heart:active::after {
+  color: #9356DC;
 }
 
 header {
@@ -610,11 +625,11 @@ nav {
 }
 
 .goal-btn:hover {
-  background: #fbfbfb;
+  background: #fbdffcb4;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08), 0 12px 12px rgba(0, 0, 0, 0.08);
 }
 .goal-btn:hover .gl-btn-icon {
-  color: #FF79DA;
+  color: #9356DC;
 }
 
 .restaurants {
