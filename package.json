@@ -2,10 +2,10 @@
   "name": "p3_ferrero_david",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./style/style.css"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/David-Ferrero1/FerreroDavid_3_12112021/issues"
   },
-  "homepage": "https://github.com/David-Ferrero1/FerreroDavid_3_12112021#readme"
+  "homepage": "https://github.com/David-Ferrero1/FerreroDavid_3_12112021#readme",
+  "dependencies": {
+    "sass": "^1.45.0"
+  }
 }
