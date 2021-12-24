@@ -76,32 +76,32 @@
 		transform: scale(1);
 	}
 }
-html {
+/* MIXIN */
+@mixin marginp {
 	margin: 0;
-	padding: 0;
+	padding: 0;	
+}
+
+/* Global */
+html {
 	box-sizing: border-box;
 }
 body {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 	position: relative;
 }
 p {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 }
 ol {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 }
 ul {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 	list-style: none;
 }
 li {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 	span {
 		&:hover {
 			cursor: pointer;
@@ -109,59 +109,46 @@ li {
 	}
 }
 dl {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 }
 dt {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 }
 dd {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 }
 blockquote {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 }
 figure {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 }
 fieldset {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 }
 legend {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 }
 textarea {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 }
 pre {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 }
 iframe {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 	border: 0;
 }
 hr {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 }
 h1 {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 	font-size: 100%;
 	font-weight: normal;
 }
 h2 {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 	font-size: 100%;
 	font-weight: normal;
 	font-family: "Roboto";
@@ -172,8 +159,7 @@ h2 {
 	padding: 3rem 2rem 0 2rem;
 }
 h3 {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 	font-size: 100%;
 	font-weight: normal;
 	font-size: 18px;
@@ -183,22 +169,19 @@ h3 {
 	width: 100%;
 }
 h4 {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 	font-size: 100%;
 	font-weight: normal;
 	font-weight: 700;
 	font-size: 18px;
 }
 h5 {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 	font-size: 100%;
 	font-weight: normal;
 }
 h6 {
-	margin: 0;
-	padding: 0;
+	@include marginp;
 	font-size: 100%;
 	font-weight: normal;
 }
