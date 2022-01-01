@@ -1,5 +1,12 @@
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 /* Colors */
+$light-green: #99e2d0;
+$hard-green: #008766;
+$purple: #9356DC;
+$light-purple: #fbdffcb4;
+$pink: #FF79DA;
+$grey:  #7e7e7e;
+
 /* Font weight */
 /* Animation du coeur des cartes de la page principale */
 @keyframes heart-transform {
@@ -32,11 +39,11 @@
 @keyframes ring {
 	0% {
 		transform: rotate(0deg);
-		box-shadow: 1px 5px 2px #9356DC;
+		box-shadow: 1px 5px 2px $purple;
 	}
 	50% {
 		transform: rotate(180deg);
-		box-shadow: 1px 5px 2px #FF79DA;
+		box-shadow: 1px 5px 2px $pink;
 	}
 	100% {
 		transform: rotate(360deg);
@@ -222,7 +229,7 @@ th {
 	padding: 0;
 }
 .explore-button {
-	background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+	background: linear-gradient(to bottom right, $pink, $purple);
 	text-decoration: none;
 	border-radius: 50px;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12);
@@ -231,12 +238,12 @@ th {
 	padding: 1rem 2rem;
 	color: white;
 	&:hover {
-		background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+		background: linear-gradient(to bottom right, $purple, $pink);
 		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.12);
 	}
 }
 .order-button {
-	background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+	background: linear-gradient(to bottom right, $pink, $purple);
 	text-decoration: none;
 	border-radius: 50px;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12);
@@ -246,7 +253,7 @@ th {
 	padding: 1rem 3rem;
 	color: white;
 	&:hover {
-		background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+		background: linear-gradient(to bottom right, $purple, $pink);
 		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.12);
 	}
 }
@@ -289,8 +296,8 @@ th {
 	}
 	.restaurant-card-new {
 		position: absolute;
-		background: #99e2d0;
-		color: #008766;
+		background: $light-green;
+		color: $hard-green;
 		border-radius: 2px;
 		top: 1rem;
 		right: 1rem;
@@ -353,7 +360,7 @@ th {
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-	background-color: #99e2d0;
+	background-color: $light-green;
 	color: white;
 	width: 60px;
 	margin-right: -60px;
@@ -388,12 +395,12 @@ th {
 		position: absolute;
 		top: 0;
 		left: calc(50% - 0.5em);
-		color: #9356DC;
+		color: $purple;
 		opacity: 0;
 	}
 	&:hover {
 		opacity: 1;
-		color: #FF79DA;
+		color: $pink;
 		transition: color 0.5s ease;
 		&::after {
 			opacity: 1;
@@ -402,7 +409,7 @@ th {
 	}
 	&:active {
 		&::after {
-			color: #9356DC;
+			color: $purple;
 		}
 	}
 }
@@ -543,7 +550,7 @@ nav {
 			height: 25px;
 			width: 25px;
 			border-radius: 50%;
-			background-color: #9356DC;
+			background-color: $purple;
 			left: 0%;
 			transform: translate(-50%);
 			span {
@@ -555,7 +562,7 @@ nav {
 			}
 		}
 		.fct-btn-icon {
-			color: #7e7e7e;
+			color:$grey;
 			font-size: 1.2rem;
 		}
 		.fct-btn-txt {
@@ -568,10 +575,10 @@ nav {
 }
 .functioning-btn {
 	&:hover {
-		background: #fbdffcb4;
+		background: $light-purple;
 		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08), 0 12px 12px rgba(0, 0, 0, 0.08);
 		.fct-btn-icon {
-			color: #9356DC;
+			color: $purple;
 		}
 	}
 }
@@ -619,7 +626,7 @@ nav {
 		display: block;
 		margin-top: 0.3rem;
 		width: 50px;
-		border-bottom: 4px solid #99e2d0;
+		border-bottom: 4px solid $light-green;
 	}
 }
 .restaurant-page-order {
