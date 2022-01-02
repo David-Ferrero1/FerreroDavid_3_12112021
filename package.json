@@ -1,0 +1,23 @@
+{
+  "name": "p3_ferrero_david",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:./style/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/David-Ferrero1/FerreroDavid_3_12112021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/David-Ferrero1/FerreroDavid_3_12112021/issues"
+  },
+  "homepage": "https://github.com/David-Ferrero1/FerreroDavid_3_12112021#readme",
+  "dependencies": {
+    "sass": "^1.45.0"
+  }
+}
