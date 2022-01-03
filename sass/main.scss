@@ -25,7 +25,7 @@ $grey:  #7e7e7e;
 }
 @keyframes SlideUp {
 	0% {
-		transform: translateY(-10%);
+		transform: translateY(+10%);
 		opacity: 0;
 	}
 	50% {
