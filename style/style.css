@@ -16,19 +16,6 @@
     transform: scale(1);
   }
 }
-@keyframes SlideUp {
-  0% {
-    transform: translateY(10%);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 @keyframes ring {
   0% {
     transform: rotate(0deg);
@@ -370,6 +357,39 @@ th {
   cursor: pointer;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 4px rgba(0, 0, 0, 0.04);
 }
+.card-food .menu-item:nth-child(1n) {
+  animation: slideUp 0.75s forwards ease;
+  animation-delay: 0.25s;
+}
+.card-food .menu-item:nth-child(2n) {
+  animation: slideUp 0.75s forwards ease;
+  animation-delay: 0.5s;
+}
+.card-food .menu-item:nth-child(3n) {
+  animation: slideUp 0.75s forwards ease;
+  animation-delay: 0.75s;
+}
+.card-food .menu-item:nth-child(4n) {
+  animation: slideUp 0.75s forwards ease;
+  animation-delay: 1s;
+}
+.card-food .menu-item:nth-child(5n) {
+  animation: slideUp 0.75s forwards ease;
+  animation-delay: 1.25s;
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .card-food:hover .card-food-anim {
   margin-right: 0px;
 }
@@ -698,18 +718,16 @@ nav {
   display: flex;
   justify-content: center;
   padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 83px;
 }
 
 .restaurant-page-entrees {
   width: 100%;
   max-width: 380px;
-  animation: 2s forwards ease-in-out SlideUp;
 }
 
 .restaurant-page-plats {
   opacity: 0;
-  animation: 2s forwards ease-in-out SlideUp;
   animation-delay: 0.5s;
   width: 100%;
   max-width: 380px;
@@ -717,7 +735,6 @@ nav {
 
 .restaurant-page-desserts {
   opacity: 0;
-  animation: 2s forwards ease-in-out SlideUp;
   animation-delay: 1s;
   width: 100%;
   max-width: 380px;
