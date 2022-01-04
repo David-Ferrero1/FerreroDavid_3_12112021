@@ -465,7 +465,7 @@ th {
 
 .fa-check-circle {
   transition: 800ms ease-in-out;
-  transform: rotate(-180deg);
+  transform: rotate(-360deg);
 }
 
 .heart-container {
@@ -475,40 +475,50 @@ th {
   flex-wrap: nowrap;
   justify-content: end;
   align-items: center;
+  background-color: #fff;
 }
 
-.fa-heart {
+.heart-container2 {
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.heart-container2 .far {
   font-size: 1.5em;
   position: relative;
   cursor: pointer;
-  color: #000;
   transition: color 0.5s ease;
 }
-.fa-heart::after {
-  display: inline-block;
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  font-weight: 900;
-  content: "\f004";
-  position: absolute;
-  top: 0;
-  left: calc(50% - 0.5em);
+.heart-container2 .far:hover {
   color: #9356DC;
+  display: block;
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
 }
-.fa-heart:hover {
-  opacity: 1;
-  color: #FF79DA;
+.heart-container2 .fas {
+  font-size: 1.5em;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.5s ease;
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
   transition: color 0.5s ease;
 }
-.fa-heart:hover::after {
+.heart-container2:hover .far {
+  opacity: 0;
+}
+.heart-container2:hover .fas {
+  color: #9356DC;
+  display: block;
+  background: linear-gradient(45deg, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 1;
   animation: heart-transform 0.45s ease-in-out;
-}
-.fa-heart:active::after {
-  color: #9356DC;
 }
 
 header {

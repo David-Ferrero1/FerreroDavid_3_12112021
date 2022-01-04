@@ -97,6 +97,12 @@ $grey:  #7e7e7e;
 	margin: 0;
 	padding: 0;	
 }
+@mixin heart-property {
+	font-size: 1.5em;
+	position: relative;
+	cursor: pointer;
+	transition: color 0.5s ease;
+}
 
 /* Global */
 html {
@@ -378,7 +384,7 @@ th {
 }
 .fa-check-circle {
 	transition: 800ms ease-in-out;
-	transform: rotate(-180deg);
+	transform: rotate(-360deg);
 }
 .heart-container {
 	width: 4em;
@@ -387,40 +393,76 @@ th {
 	flex-wrap: nowrap;
 	justify-content: end;
 	align-items: center;
+	background-color: #fff;
 }
-.fa-heart {
-	font-size: 1.5em;
+.heart-container2 {
 	position: relative;
-	cursor: pointer;	
-	color: #000;
-	transition: color 0.5s ease;
-	&::after {
-		display: inline-block;
-		font-family: "Font Awesome 5 Free";
-		font-style: normal;
-		font-variant: normal;
-		text-rendering: auto;
-		font-weight: 900;
-		content: "\f004";
+	transition: .5s ease;	
+}
+// .fa-heart {
+// 	font-size: 1.5em;
+// 	position: relative;
+// 	cursor: pointer;	
+// 	color: #000;
+// 	transition: color 0.5s ease;
+// 	&::after {
+// 		display: inline-block;
+// 		font-family: "Font Awesome 5 Free";
+// 		font-style: normal;
+// 		font-variant: normal;
+// 		text-rendering: auto;
+// 		font-weight: 900;
+// 		content: "\f004";
+// 		position: absolute;
+// 		top: 0;
+// 		left: calc(50% - 0.5em);
+// 		color: $purple;
+// 		opacity: 0;
+// 	}
+// 	&:hover {
+// 		opacity: 1;
+// 		// color: $pink;
+// 		transition: color 0.5s ease;
+// 		&::after {
+// 			opacity: 1;
+// 			animation: heart-transform 0.45s ease-in-out;
+// 		}
+// 	}
+// }
+
+.heart-container2 {
+	.far {	
+		@include heart-property();	
+		&:hover {
+			color: $purple;
+			display: block;
+			background: -webkit-linear-gradient($pink, $purple);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			opacity: 0;
+		}
+	}
+	.fas {
+		@include heart-property();
 		position: absolute;
-		top: 0;
-		left: calc(50% - 0.5em);
-		color: $purple;
 		opacity: 0;
+		right: 0;
+		top: 0;
+		transition: color 0.5s ease;
 	}
 	&:hover {
-		opacity: 1;
-		color: $pink;
-		transition: color 0.5s ease;
-		&::after {
+		.far {
+			opacity: 0;
+		}
+		.fas {
+			color: $purple;
+			display: block;
+			background: linear-gradient(45deg, $pink 0%, $purple 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
 			opacity: 1;
 			animation: heart-transform 0.45s ease-in-out;
-		}
-	}
-	&:active {
-		&::after {
-			color: $purple;
-		}
+		}		
 	}
 }
 header {
