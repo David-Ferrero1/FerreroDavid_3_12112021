@@ -23,18 +23,50 @@ $grey:  #7e7e7e;
 		transform: scale(1);
 	}
 }
-@keyframes SlideUp {
-	0% {
-		transform: translateY(+10%);
-		opacity: 0;
+@keyframes menuItemsDisplay {
+	from {
+	  opacity: 0;
+	  transform: translate3d(0, 10px, 0);
+	  backface-visibility: hidden;
 	}
-	50% {
-		opacity: 0.5;
+	to {
+	  opacity: 1;
+	  transform: translate3d(0, 0, 0);
+	  backface-visibility: hidden;
 	}
-	100% {
-		transform: translateY(0);
-		opacity: 1;
+  }
+  
+  @for $i from 1 through 10 {
+	.menuItemsButtons {
+	  &:nth-child(#{$i}) {
+		animation-delay: $i * (0.2s);
+		animation-fill-mode: both;
+	  }
 	}
+  } 
+@mixin animation-slideUp {
+    
+    @for $i from 1 through 5 {
+        & .menu-item:nth-child(#{$i}n) {
+            animation: slideUp .75s forwards ease;
+            animation-delay: #{$i * 0.25}s;
+        }
+    }
+
+    @keyframes slideUp {
+        0% {
+			transform: translateY(+15%);
+			opacity: 0;
+		}
+		50% {
+			opacity: 0.5;
+		}
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+}
+	
 }
 @keyframes ring {
 	0% {
@@ -326,6 +358,8 @@ th {
 	font-family: "Roboto";
 	cursor: pointer;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 4px rgba(0, 0, 0, 0.04);
+	@include animation-slideUp;
+	animation: menuItemsDisplay 0.4s ease-out;
 	&:hover {
 		.card-food-anim {
 			margin-right: 0px;
@@ -639,18 +673,15 @@ nav {
 .restaurant-page-entrees {
 	width: 100%;
 	max-width: 380px;
-	animation: 2s forwards ease-in-out SlideUp;
 }
 .restaurant-page-plats {
 	opacity: 0;
-	animation: 2s forwards ease-in-out SlideUp;
 	animation-delay: 0.5s;
 	width: 100%;
 	max-width: 380px;
 }
 .restaurant-page-desserts {
 	opacity: 0;
-	animation: 2s forwards ease-in-out SlideUp;
 	animation-delay: 1s;
 	width: 100%;
 	max-width: 380px;
