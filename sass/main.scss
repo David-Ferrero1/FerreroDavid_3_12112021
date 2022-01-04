@@ -24,15 +24,16 @@ $grey:  #7e7e7e;
 	}
 }
 @keyframes menuItemsDisplay {
-	from {
-	  opacity: 0;
-	  transform: translate3d(0, 10px, 0);
-	  backface-visibility: hidden;
+	0% {
+		transform: translateY(+15%);
+		opacity: 0;
 	}
-	to {
-	  opacity: 1;
-	  transform: translate3d(0, 0, 0);
-	  backface-visibility: hidden;
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
 	}
   }
   
@@ -44,30 +45,6 @@ $grey:  #7e7e7e;
 	  }
 	}
   } 
-// @mixin animation-slideUp {
-    
-//     @for $i from 1 through 5 {
-//         & .menu-item:nth-child(#{$i}n) {
-//             animation: slideUp .75s forwards ease;
-//             animation-delay: #{$i * 0.25}s;
-//         }
-//     }
-
-//     @keyframes slideUp {
-//         0% {
-// 			transform: translateY(+15%);
-// 			opacity: 0;
-// 		}
-// 		50% {
-// 			opacity: 0.5;
-// 		}
-// 		100% {
-// 			transform: translateY(0);
-// 			opacity: 1;
-// 		}
-// }
-	
-// }
 @keyframes ring {
 	0% {
 		transform: rotate(0deg);
@@ -674,13 +651,11 @@ nav {
 	max-width: 380px;
 }
 .restaurant-page-plats {
-	opacity: 0;
 	animation-delay: 0.5s;
 	width: 100%;
 	max-width: 380px;
 }
 .restaurant-page-desserts {
-	opacity: 0;
 	animation-delay: 1s;
 	width: 100%;
 	max-width: 380px;
@@ -696,7 +671,7 @@ nav {
 	animation-name: loaderspinner;
 	min-height: 100%;
 	min-width: 100%;
-	animation-delay: 5s;
+	animation-delay: 2.5s;
 	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
 }
