@@ -608,7 +608,7 @@ nav {
   background-color: white;
   font-family: "Roboto";
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   padding: 3rem 2rem 0 2rem;
 }
 
@@ -632,7 +632,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 1rem 3rem 3.5rem 3rem;
+  padding: 2rem 3rem 3rem 3rem;
   gap: 1rem;
   background: #f6f6f6;
 }
@@ -654,7 +654,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem 5rem 1rem;
+  padding: 1.5rem 1rem 4rem 1rem;
   gap: 1rem;
 }
 .functioning .functioning-btn {
