@@ -16,9 +16,9 @@
     transform: scale(1);
   }
 }
-@keyframes SlideUp {
+@keyframes menuItemsDisplay {
   0% {
-    transform: translateY(-10%);
+    transform: translateY(15%);
     opacity: 0;
   }
   50% {
@@ -29,6 +29,56 @@
     opacity: 1;
   }
 }
+.card-food:nth-child(1) {
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+.card-food:nth-child(2) {
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
+}
+
+.card-food:nth-child(3) {
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+}
+
+.card-food:nth-child(4) {
+  animation-delay: 0.8s;
+  animation-fill-mode: both;
+}
+
+.card-food:nth-child(5) {
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+.card-food:nth-child(6) {
+  animation-delay: 1.2s;
+  animation-fill-mode: both;
+}
+
+.card-food:nth-child(7) {
+  animation-delay: 1.4s;
+  animation-fill-mode: both;
+}
+
+.card-food:nth-child(8) {
+  animation-delay: 1.6s;
+  animation-fill-mode: both;
+}
+
+.card-food:nth-child(9) {
+  animation-delay: 1.8s;
+  animation-fill-mode: both;
+}
+
+.card-food:nth-child(10) {
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
 @keyframes ring {
   0% {
     transform: rotate(0deg);
@@ -185,7 +235,7 @@ h2 {
   font-size: 1.5rem;
   width: 100%;
   background-color: #f6f6f6;
-  padding: 3rem 2rem 0 2rem;
+  padding: 3rem 20px 0 20px;
 }
 
 h3 {
@@ -290,7 +340,7 @@ th {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12);
   font-family: "Roboto";
   font-weight: 400;
-  font-size: 18px;
+  font-size: 0.95rem;
   padding: 1rem 3rem;
   color: white;
 }
@@ -331,7 +381,7 @@ th {
   font-family: "Roboto";
 }
 .restaurant-card .restaurant-card-down-area .restaurant-card-txt .card-txt-medium {
-  font-size: 14px;
+  font-size: 16px;
 }
 .restaurant-card .restaurant-card-down-area .restaurant-card-heart {
   font-size: 1.4rem;
@@ -369,6 +419,7 @@ th {
   font-family: "Roboto";
   cursor: pointer;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 4px rgba(0, 0, 0, 0.04);
+  animation: menuItemsDisplay 0.4s ease-out;
 }
 .card-food:hover .card-food-anim {
   margin-right: 0px;
@@ -414,7 +465,7 @@ th {
 
 .fa-check-circle {
   transition: 800ms ease-in-out;
-  transform: rotate(-180deg);
+  transform: rotate(-360deg);
 }
 
 .heart-container {
@@ -422,42 +473,52 @@ th {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
+  background-color: #fff;
 }
 
-.fa-heart {
+.heart-container2 {
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.heart-container2 .far {
   font-size: 1.5em;
   position: relative;
   cursor: pointer;
-  color: #000;
   transition: color 0.5s ease;
 }
-.fa-heart::after {
-  display: inline-block;
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  font-weight: 900;
-  content: "\f004";
-  position: absolute;
-  top: 0;
-  left: calc(50% - 0.5em);
+.heart-container2 .far:hover {
   color: #9356DC;
+  display: block;
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
 }
-.fa-heart:hover {
-  opacity: 1;
-  color: #FF79DA;
+.heart-container2 .fas {
+  font-size: 1.5em;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.5s ease;
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
   transition: color 0.5s ease;
 }
-.fa-heart:hover::after {
+.heart-container2:hover .far {
+  opacity: 0;
+}
+.heart-container2:hover .fas {
+  color: #9356DC;
+  display: block;
+  background: linear-gradient(45deg, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 1;
   animation: heart-transform 0.45s ease-in-out;
-}
-.fa-heart:active::after {
-  color: #9356DC;
 }
 
 header {
@@ -470,6 +531,7 @@ header {
   left: 50%;
   transform: translateX(-50%);
   margin: 1rem 0;
+  height: 1.375rem;
 }
 
 .header-restaurant {
@@ -546,7 +608,7 @@ nav {
   background-color: white;
   font-family: "Roboto";
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   padding: 3rem 2rem 0 2rem;
 }
 
@@ -570,7 +632,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 1rem 3rem 3.5rem 3rem;
+  padding: 2rem 3rem 3rem 3rem;
   gap: 1rem;
   background: #f6f6f6;
 }
@@ -592,7 +654,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem 5rem 1rem;
+  padding: 1.5rem 1rem 4rem 1rem;
   gap: 1rem;
 }
 .functioning .functioning-btn {
@@ -621,6 +683,7 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  font-family: "Roboto";
 }
 .functioning .functioning-btn .fct-btn-icon {
   color: #7e7e7e;
@@ -643,7 +706,7 @@ nav {
 
 .restaurants {
   background-color: #f6f6f6;
-  padding: 1rem 2rem 3.5rem 2rem;
+  padding: 1rem 20px 3.5rem 20px;
   display: grid;
   width: 100%;
   gap: 2rem;
@@ -651,7 +714,7 @@ nav {
 
 .restaurant-img-bg {
   object-fit: cover;
-  height: 300px;
+  height: 235px;
   width: 100%;
 }
 
@@ -698,26 +761,21 @@ nav {
   display: flex;
   justify-content: center;
   padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 5.2rem;
 }
 
 .restaurant-page-entrees {
   width: 100%;
   max-width: 380px;
-  animation: 2s forwards ease-in-out SlideUp;
 }
 
 .restaurant-page-plats {
-  opacity: 0;
-  animation: 2s forwards ease-in-out SlideUp;
   animation-delay: 0.5s;
   width: 100%;
   max-width: 380px;
 }
 
 .restaurant-page-desserts {
-  opacity: 0;
-  animation: 2s forwards ease-in-out SlideUp;
   animation-delay: 1s;
   width: 100%;
   max-width: 380px;
@@ -734,7 +792,7 @@ nav {
   animation-name: loaderspinner;
   min-height: 100%;
   min-width: 100%;
-  animation-delay: 5s;
+  animation-delay: 2.5s;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
@@ -818,6 +876,10 @@ nav {
 
   .restaurants {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .restaurant-img-bg {
+    height: 350px;
   }
 
   .ring {
